@@ -1,0 +1,56 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Base path for all app data
+    match /artifacts/{appId} {
+      // User profiles
+      match /users/{userId}/profile/{document=**} {
+        allow read: if isAuthenticated();
+        allow write: if isOwner(userId);
+      }
+
+      // Public trip listings
+      match /public/data/trips/{tripId} {
+        allow read: if isAuthenticated();
+        
+        allow create: if isAuthenticated() 
+          && request.resource.data.hostId == request.auth.uid
+          && request.resource.data.seatsAvailable > 0;
+        
+        allow update: if isAuthenticated() 
+          && (
+            // Host can update their trip
+            resource.data.hostId == request.auth.uid
+            ||
+            // Users can join/leave if seats are available
+            (
+              resource.data.seatsAvailable > 0 
+              && request.resource.data.seatsAvailable == resource.data.seatsAvailable - 1
+              && request.resource.data.attendees.hasAll(resource.data.attendees)
+              && request.resource.data.attendees.removeAll(resource.data.attendees).size() == 1
+            )
+            ||
+            // Users can leave a trip
+            (
+              request.resource.data.seatsAvailable == resource.data.seatsAvailable + 1
+              && resource.data.attendees.hasAll(request.resource.data.attendees)
+              && resource.data.attendees.removeAll(request.resource.data.attendees).size() == 1
+            )
+          );
+        
+        allow delete: if isAuthenticated() 
+          && resource.data.hostId == request.auth.uid;
+      }
+    }
+  }
+}
