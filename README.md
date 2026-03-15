@@ -1,5 +1,12 @@
 🚗 Link My Trip 
 
+![HTML](https://img.shields.io/badge/HTML-Frontend-orange)
+![CSS](https://img.shields.io/badge/CSS-Styling-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-Frontend-yellow)
+![Firebase](https://img.shields.io/badge/Firebase-Backend-orange)
+![Firestore](https://img.shields.io/badge/Database-Firestore-red)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 Link My Trip is a web-based platform that helps people travel together to the same destination and share trip costs.
 The system connects users who are traveling along similar routes and allows them to create trips, find matching trips, and send join requests.
 
