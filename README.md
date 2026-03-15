@@ -161,3 +161,8 @@ GROUP 12
 📜 License
 
 This project is created for educational and research purposes.
+
+# 🚗 Link My Trip
+
+🌍 **Live Platform:** https://your-link.com  
+📂 **GitHub Repository:** https://github.com/yourusername/link-my-trip
