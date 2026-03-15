@@ -75,6 +75,7 @@ Firebase Realtime Database	Live trip updates
 Firebase Cloud Storage	File and image storage
 Firebase Cloud Functions	Backend logic
 📂 Project Structure
+
 Link-My-Trip
 │
 ├── index.html
@@ -97,6 +98,7 @@ Link-My-Trip
 └── README.md
 🔄 System Workflow
 1️⃣ User Login
+
 
 User enters credentials
 
@@ -164,5 +166,5 @@ This project is created for educational and research purposes.
 
 # 🚗 Link My Trip
 
-🌍 **Live Platform:** https://your-link.com  
-📂 **GitHub Repository:** https://github.com/yourusername/link-my-trip
+🌍 **Live Platform:**https://link-my-trip.web.app 
+📂 **GitHub Repository:** https://github.com/ayushjayapraksahan/link-my-trip
