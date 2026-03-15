@@ -78,27 +78,24 @@ Firebase Cloud Functions	Backend logic
 
 Link-My-Trip
 │
-├──> index.html
-├──> login.html
-├──> register.html
-├──> dashboard.html
+├── index.html
+├── login.html
+├── register.html
+├── dashboard.html
 │
-├──>css
-│   └──> styles.css
+├── css
+│   └── styles.css
 │
-├──> js
-│   ├──> auth.js
-│   ├──> trips.js
-│   ├──> matching.js
+├── js
+│   ├── auth.js
+│   ├── trips.js
+│   ├── matching.js
 │   └── requests.js
 │
-├──> firebase
+├── firebase
 │   └── firebase-config.js
 │
-└──> README.md
-🔄 System Workflow
-1️⃣ User Login
-
+└── README.md
 
 User enters credentials
 
