@@ -1,4 +1,4 @@
-🚗 Link My Trip
+🚗 Link My Trip 🌍 **Live Platform:**https://link-my-trip.web.app 
 
 Link My Trip is a web-based platform that helps people travel together to the same destination and share trip costs.
 The system connects users who are traveling along similar routes and allows them to create trips, find matching trips, and send join requests.
@@ -74,8 +74,9 @@ Firebase Firestore	Database storage
 Firebase Realtime Database	Live trip updates
 Firebase Cloud Storage	File and image storage
 Firebase Cloud Functions	Backend logic
-📂 Project Structure
 
+## 📂 Project Structure
+```
 Link-My-Trip
 │
 ├── index.html
@@ -96,6 +97,7 @@ Link-My-Trip
 │   └── firebase-config.js
 │
 └── README.md
+```
 
 User enters credentials
 
