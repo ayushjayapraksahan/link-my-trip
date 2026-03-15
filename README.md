@@ -1,4 +1,4 @@
-🚗 Link My Trip 🌍 **Live Platform:**https://link-my-trip.web.app 
+🚗 Link My Trip 
 
 Link My Trip is a web-based platform that helps people travel together to the same destination and share trip costs.
 The system connects users who are traveling along similar routes and allows them to create trips, find matching trips, and send join requests.
